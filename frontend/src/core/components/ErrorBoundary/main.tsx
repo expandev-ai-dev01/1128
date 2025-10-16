@@ -6,7 +6,7 @@
  * @category error-handling
  */
 
-import { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo } from 'react';
 import type { ErrorBoundaryProps, ErrorBoundaryState } from './types';
 
 export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {

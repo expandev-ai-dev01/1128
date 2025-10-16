@@ -6,7 +6,6 @@
  * @category form
  */
 
-import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { cn } from '@/core/utils/cn';
 import { buttonVariants } from './variants';
 import type { ButtonProps } from './types';

@@ -11,7 +11,7 @@ import { RootLayout } from '@/pages/layouts/RootLayout';
 import { LoadingSpinner } from '@/core/components/LoadingSpinner';
 import { ErrorBoundary } from '@/core/components/ErrorBoundary';
 
-const HomePage = lazy(() => import('@/pages/Home'));
+const TasksPage = lazy(() => import('@/pages/Tasks'));
 const NotFoundPage = lazy(() => import('@/pages/NotFound'));
 
 export const AppRouter = () => {
@@ -19,11 +19,12 @@ export const AppRouter = () => {
     <ErrorBoundary>
       <Routes>
         <Route path="/" element={<RootLayout />}>
+          <Route index element={<Navigate to="/tasks" replace />} />
           <Route
-            index
+            path="tasks"
             element={
               <Suspense fallback={<LoadingSpinner />}>
-                <HomePage />
+                <TasksPage />
               </Suspense>
             }
           />
